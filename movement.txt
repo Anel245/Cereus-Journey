@@ -1,0 +1,2 @@
+﻿C:\Users\breti\Documents\GitHub\Cereus Reise\Assembly-CSharp-Editor.csproj : error  : Die Projektdatei konnte nicht geladen werden. Die Datei "C:\Users\breti\Documents\GitHub\Cereus Reise\Assembly-CSharp-Editor.csproj" konnte nicht gefunden werden.  C:\Users\breti\Documents\GitHub\Cereus Reise\Assembly-CSharp-Editor.csproj
+
