@@ -8,7 +8,7 @@ public class Menu : MonoBehaviour
    
     public void PlayGame(){
 
-        SceneManager.LoadScene("Demo");
+        SceneManager.LoadScene("Level01");
 
         Debug.Log("Button is pressed");
     }
