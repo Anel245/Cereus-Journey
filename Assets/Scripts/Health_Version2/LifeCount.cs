@@ -33,7 +33,6 @@ public class LifeCount : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Jump"))
-            LoseLife();
+
     }
 }

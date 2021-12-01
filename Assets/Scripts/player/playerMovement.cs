@@ -39,7 +39,7 @@ public class playerMovement : MonoBehaviour
     {
         PlayerMoveKeyboard();
         AnimatePlayer();
-        PlayerJump();
+        
         float speed = Mathf.Abs(movementX);
         anim.SetFloat("speed",speed); 
 
@@ -48,7 +48,7 @@ public class playerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        PlayerJump();  
+        
     }
 
     void PlayerMoveKeyboard()
@@ -80,22 +80,5 @@ public class playerMovement : MonoBehaviour
 
     }
 
-    void PlayerJump(){
-
-        if (Input.GetButtonDown("Jump") && isGrounded) {
-            isGrounded = false;
-            myBody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-            anim.SetTrigger("jumpTrigger");
-        }
-
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        
-        if (collision.gameObject.CompareTag(GROUND_TAG)) {
-            isGrounded = true;
-            anim.SetBool("jump", false);
-        }
-    }
 
 } // class

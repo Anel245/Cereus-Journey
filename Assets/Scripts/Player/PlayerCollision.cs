@@ -13,7 +13,7 @@ public class PlayerCollision : MonoBehaviour
             gameObject.SetActive(false);
         }
 
-
+        
     }
 
 
