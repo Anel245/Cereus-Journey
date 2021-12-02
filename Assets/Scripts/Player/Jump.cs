@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Jump : MonoBehaviour
 {
     [SerializeField] private LayerMask platformsLayerMask;
     private Rigidbody2D rigidbody2d;

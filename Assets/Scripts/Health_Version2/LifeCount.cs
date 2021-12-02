@@ -7,6 +7,7 @@ public class LifeCount : MonoBehaviour
 {
     public Image[] lives;
     public int livesRemaining;
+   
 
     //4 lives - 4 images (0,1,2,3)
     //3 lives - 3 images (0,1,2,[3])
@@ -33,6 +34,14 @@ public class LifeCount : MonoBehaviour
 
     private void Update()
     {
+
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "Enemy")
+        LoseLife();
 
     }
 }
