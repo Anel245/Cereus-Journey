@@ -19,6 +19,7 @@ public class LifeCount : MonoBehaviour
     {
         //Decrease the value of livesRemaining
         livesRemaining--;
+        print(livesRemaining);
         //Hide one of the life image
         lives[livesRemaining].enabled = false;
 
@@ -35,13 +36,11 @@ public class LifeCount : MonoBehaviour
     private void Update()
     {
 
-    }
-
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.transform.tag == "Enemy")
-        LoseLife();
 
     }
-}
+
+
+   
+  
+    }
+

@@ -10,8 +10,8 @@ public class PlayerCollision : MonoBehaviour
     {
         if(collision.transform.tag == "Enemy")
         {
-            PlayerManager.isGameOver = true;
-            gameObject.SetActive(false);
+            GetComponent<LifeCount>().LoseLife();
+
         }
 
         

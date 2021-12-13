@@ -1417,9 +1417,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1204732122072764759, guid: 0557beaacb0865341a4b4727e9dc2cfe, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4715505061479309129, guid: 0557beaacb0865341a4b4727e9dc2cfe, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7463103074532708698, guid: 0557beaacb0865341a4b4727e9dc2cfe, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1204732122072764756, guid: 0557beaacb0865341a4b4727e9dc2cfe, type: 3}
@@ -6402,7 +6410,7 @@ EdgeCollider2D:
   - {x: -0.57792234, y: -0.0022823215}
   - {x: -0.5375741, y: -0.14653945}
   - {x: -0.49767646, y: -0.24775434}
-  - {x: -0.4208203, y: -0.25286418}
+  - {x: -0.4831884, y: -0.2695366}
   - {x: -0.47354364, y: -0.3001302}
   - {x: -0.5894665, y: -0.37973332}
   - {x: -0.5964671, y: -0.5060154}
@@ -6426,8 +6434,11 @@ EdgeCollider2D:
   - {x: 0.526939, y: -0.22582392}
   - {x: 0.56191206, y: -0.049587235}
   - {x: 0.5831317, y: 0.1397372}
-  - {x: 0.5605177, y: 0.39832073}
+  - {x: 0.54598445, y: 0.39336732}
+  - {x: 0.47266132, y: 0.5980109}
   - {x: 0.33479062, y: 0.78686714}
+  - {x: 0.17959273, y: 0.8855668}
+  - {x: 0.018845823, y: 0.92929053}
   - {x: -0.20263293, y: 0.89457196}
   - {x: -0.18207885, y: 0.9301745}
   - {x: -0.19330654, y: 1.0065331}
