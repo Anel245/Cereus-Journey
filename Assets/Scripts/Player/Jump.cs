@@ -8,6 +8,7 @@ public class Jump : MonoBehaviour
     private Rigidbody2D rigidbody2d;
     private BoxCollider2D boxCollider2d;
     private bool isJumping;
+    private Animator anim;
 
 
 
@@ -15,17 +16,25 @@ public class Jump : MonoBehaviour
     {
         rigidbody2d = transform.GetComponent<Rigidbody2D>();
         boxCollider2d = transform.GetComponent<BoxCollider2D>();
+        anim = transform.GetComponent<Animator>();
     }
 
 
     // Update is called once per frame
     private void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
         {
+            anim.SetTrigger("takeOf");
             float jumpVelocity = 10f;
             rigidbody2d.velocity = Vector2.up * jumpVelocity;
             isJumping = true;
+        }
+
+        else if (isJumping) 
+        {
+            anim.SetBool("isJumping", true);
         }
 
 
@@ -36,7 +45,9 @@ public class Jump : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ground"))
         {
+            print("landing");
             isJumping = false;
+            anim.SetBool("isJumping", false);
         }
 
     }
