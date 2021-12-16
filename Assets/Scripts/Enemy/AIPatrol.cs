@@ -11,7 +11,6 @@ public class AIPatrol : MonoBehaviour
     private bool mustTurn;
 
     public Rigidbody2D rb;
-    public Transform groundCheckPos;
     public LayerMask PlatformsLayer;
     public Collider2D bodyCollider;
     void Start()
@@ -19,29 +18,26 @@ public class AIPatrol : MonoBehaviour
         mustPatrol = true;
     }
 
-    
+
     void Update()
     {
-        if(mustPatrol)
+        if (mustPatrol)
         {
             Patrol();
         }
     }
-    private void FixedUpdate()
-    {
-        if (mustPatrol)
-        {
-            mustTurn = !Physics2D.OverlapCircle(groundCheckPos.position, 0.1f, PlatformsLayer);
-        }
-    }
+
     void Patrol()
     {
-        if(mustTurn || bodyCollider.IsTouchingLayers(PlatformsLayer))
+        
+        if (mustTurn || bodyCollider.IsTouchingLayers(PlatformsLayer))
+        
         {
+            print("string");
             Flip();
         }
 
-        rb.velocity = new Vector2(walkSpeed * Time.fixedDeltaTime, rb.velocity.y);
+        rb.velocity = new Vector2(-walkSpeed * Time.fixedDeltaTime, rb.velocity.y);
 
     }
 
@@ -49,7 +45,7 @@ public class AIPatrol : MonoBehaviour
     {
         mustPatrol = false;
         transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
-        walkSpeed *= 1;
+        walkSpeed *= -1;
         mustPatrol = true;
     }
 
