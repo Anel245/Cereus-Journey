@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream:Assets/ImportedSprites/NewCac.meta
 guid: 8126fae9e94174c439ef82a8118d50c7
+=======
+guid: f2f5cd78410de28469f66268a77d9669
+>>>>>>> Stashed changes:Assets/Scripts/Enemy.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
