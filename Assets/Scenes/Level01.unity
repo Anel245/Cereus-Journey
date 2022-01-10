@@ -1656,12 +1656,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1204732122072764748, guid: 0557beaacb0865341a4b4727e9dc2cfe, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3272737
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204732122072764748, guid: 0557beaacb0865341a4b4727e9dc2cfe, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2880626
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204732122072764748, guid: 0557beaacb0865341a4b4727e9dc2cfe, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.102
       objectReference: {fileID: 0}
     - target: {fileID: 1204732122072764748, guid: 0557beaacb0865341a4b4727e9dc2cfe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.239
+      value: -1.349
       objectReference: {fileID: 0}
     - target: {fileID: 1204732122072764748, guid: 0557beaacb0865341a4b4727e9dc2cfe, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3434,7 +3442,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283912792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.102, y: 0.26100004, z: -10}
+  m_LocalPosition: {x: -2.102, y: 0.15100002, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 640181620}
@@ -10418,7 +10426,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.102, y: 0.26100004, z: -10}
+  m_LocalPosition: {x: -2.102, y: 0.15100002, z: -10}
   m_LocalScale: {x: 4.646489, y: 59.709553, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -18832,8 +18840,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1753429574}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.9252, y: -1.0907, z: 0}
-  m_LocalScale: {x: 0.19464004, y: 0.22316863, z: 1}
+  m_LocalPosition: {x: 3.307, y: -1.316, z: 0}
+  m_LocalScale: {x: 0.1510959, y: 0.1732421, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -18867,8 +18875,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.4256535, y: 0.000003222415}
-  m_Size: {x: 9.148686, y: 8.972416}
+  m_Offset: {x: -3.470876, y: -0.90275717}
+  m_Size: {x: 6.5024586, y: 7.131102}
   m_Direction: 0
 --- !u!95 &1753429579
 Animator:
