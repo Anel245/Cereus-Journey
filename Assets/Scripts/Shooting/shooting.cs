@@ -20,7 +20,7 @@ public class shooting : MonoBehaviour
         //   = Quaternion.Euler(0, 0, lookAngle);
         //firePoint.rotation.SetLookRotation(lookDirection);
         //firePoint.rotation.SetLookRotation(new Vector3(lookDirection.x, lookDirection.y, 0f));
-        firePoint.Rotate(new Vector3(0f, 0f, 1f));
+        firePoint.LookAt(lookDirection);
         Debug.Log("lookAngle: " + lookAngle + ", lookDirection: " + lookDirection);
 
         if (Input.GetMouseButtonDown(0))
@@ -29,7 +29,7 @@ public class shooting : MonoBehaviour
             bulletClone.transform.position = firePoint.position;
             bulletClone.transform.rotation = Quaternion.Euler(0, 0, lookAngle);
 
-            bulletClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * bulletSpeed;
+            bulletClone.GetComponent<Rigidbody2D>().velocity = firePoint.forward * bulletSpeed;
         }
     }
 }

@@ -18812,7 +18812,7 @@ GameObject:
   - component: {fileID: 1753429577}
   - component: {fileID: 1753429578}
   - component: {fileID: 1753429579}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bad
   m_TagString: Enemy
   m_Icon: {fileID: 0}
