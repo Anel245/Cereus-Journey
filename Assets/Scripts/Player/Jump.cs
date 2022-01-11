@@ -10,11 +10,6 @@ public class Jump : MonoBehaviour
     private bool isJumping;
     private Animator anim;
 
-    [SerializeField]
-    private float jumpForce = 11f;
-
-
-
 
 
     private void Awake()
@@ -45,7 +40,6 @@ public class Jump : MonoBehaviour
 
 
     }
-
 
     void OnCollisionEnter2D(Collision2D other)
     {
