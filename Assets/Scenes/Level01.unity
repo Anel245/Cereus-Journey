@@ -13557,6 +13557,7 @@ MonoBehaviour:
   platformsLayerMask:
     serializedVersion: 2
     m_Bits: 0
+  jumpForce: 11
 --- !u!1 &1332080386
 GameObject:
   m_ObjectHideFlags: 0
