@@ -11,11 +11,17 @@ public class PlayerShoot : MonoBehaviour
     public Transform shootPosR;
     public Transform shootPosL;
     public GameObject bullet;
+    private Animator anim;
+    private string shoot_ANIMATION = "shoot";
 
 
     void Start()
     {
         isShooting = false;
+    }
+    private void Awake()
+    {
+        anim = transform.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -31,6 +37,11 @@ public class PlayerShoot : MonoBehaviour
 
     IEnumerator Shoot()
     {
+        if (isShooting == true)
+        {
+            anim.SetBool("shoot", true);
+        }
+
         int direction()
         {
             if(GetComponent <SpriteRenderer>().flipX)
