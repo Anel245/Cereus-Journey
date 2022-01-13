@@ -12,6 +12,7 @@ public class Jump : MonoBehaviour
 
     [SerializeField]
     private float jumpForce = 11f;
+    private float movementY;
 
 
 
@@ -22,13 +23,31 @@ public class Jump : MonoBehaviour
         rigidbody2d = transform.GetComponent<Rigidbody2D>();
         boxCollider2d = transform.GetComponent<BoxCollider2D>();
         anim = transform.GetComponent<Animator>();
+
+    }
+    void Update()
+    {
+        PlayerMoveKeyboard();
+
+        float speed = Mathf.Abs(movementY);
+        anim.SetFloat("speed", speed);
+
+
+    }
+
+    void PlayerMoveKeyboard()
+    {
+
+        movementY = Input.GetAxisRaw("Vertical");
+
+        transform.position += new Vector3(0f, movementY, 0f) * jumpForce * Time.deltaTime;
     }
 
 
     // Update is called once per frame
-    private void Update()
+    private void FixedUpdate()
     {
-
+        
         if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
         {
             anim.SetTrigger("takeOf");

@@ -7,9 +7,16 @@ public class shooting : MonoBehaviour
     public GameObject bullet;
     public Transform firePoint;
     public float bulletSpeed = 50;
+    private Animator anim;
+    private string shoot_ANIMATION = "Shoot";
 
     Vector2 lookDirection;
     float lookAngle;
+
+    private void Awake()
+    {
+        anim = transform.GetComponent<Animator>();
+    }
 
     void Update()
     {
@@ -21,15 +28,19 @@ public class shooting : MonoBehaviour
         //firePoint.rotation.SetLookRotation(lookDirection);
         //firePoint.rotation.SetLookRotation(new Vector3(lookDirection.x, lookDirection.y, 0f));
         firePoint.LookAt(lookDirection);
-        Debug.Log("lookAngle: " + lookAngle + ", lookDirection: " + lookDirection);
+        //Debug.Log("lookAngle: " + lookAngle + ", lookDirection: " + lookDirection);
 
         if (Input.GetMouseButtonDown(0))
         {
+            anim.SetTrigger(shoot_ANIMATION);
+            //TODO: Separate shooting input from output
+            
             GameObject bulletClone = Instantiate(bullet);
             bulletClone.transform.position = firePoint.position;
             bulletClone.transform.rotation = Quaternion.Euler(0, 0, lookAngle);
 
             bulletClone.GetComponent<Rigidbody2D>().velocity = firePoint.forward * bulletSpeed;
+           
         }
     }
 }

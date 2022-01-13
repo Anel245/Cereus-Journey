@@ -7,7 +7,7 @@ public class playerMovement : MonoBehaviour
     [SerializeField]
     private float moveForce = 10f;
     [SerializeField]
-    private float jumpForce = 11f;
+    
 
     private float movementX;
 
@@ -41,8 +41,9 @@ public class playerMovement : MonoBehaviour
         AnimatePlayer();
         
         float speed = Mathf.Abs(movementX);
-        anim.SetFloat("speed",speed); 
-
+        Debug.Log(speed);
+        anim.SetFloat("speed",speed);
+        Debug.Log(speed);
 
     }
 
@@ -55,7 +56,7 @@ public class playerMovement : MonoBehaviour
     {
 
         movementX = Input.GetAxisRaw("Horizontal");
-
+        //Debug.Log(movementX);
         transform.position += new Vector3(movementX, 0f, 0f) * moveForce * Time.deltaTime;
     }
 
