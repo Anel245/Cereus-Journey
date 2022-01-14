@@ -10,9 +10,9 @@ public class Jump : MonoBehaviour
     private bool isJumping;
     private Animator anim;
 
-    [SerializeField]
-    private float jumpForce = 11f;
+
     private float movementY;
+    public float jumpVelocity = 10f;
 
 
 
@@ -40,7 +40,7 @@ public class Jump : MonoBehaviour
 
         movementY = Input.GetAxisRaw("Vertical");
 
-        transform.position += new Vector3(0f, movementY, 0f) * jumpForce * Time.deltaTime;
+        transform.position += new Vector3(0f, movementY, 0f) * Time.deltaTime;
     }
 
 
@@ -51,7 +51,7 @@ public class Jump : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
         {
             anim.SetTrigger("takeOf");
-            float jumpVelocity = 10f;
+            
             rigidbody2d.velocity = Vector2.up * jumpVelocity;
             isJumping = true;
         }
