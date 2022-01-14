@@ -9,6 +9,9 @@ public class shooting : MonoBehaviour
     public float bulletSpeed = 50;
     private Animator anim;
     private string shoot_ANIMATION = "Shoot";
+    private float shootingCooldown = 0.25f;
+    [SerializeField]
+    private float shootingCooldownMaximum = 0.5f;
 
     Vector2 lookDirection;
     float lookAngle;
@@ -16,6 +19,8 @@ public class shooting : MonoBehaviour
     private void Awake()
     {
         anim = transform.GetComponent<Animator>();
+        shootingCooldown = shootingCooldownMaximum;
+
     }
 
     void Update()
@@ -30,18 +35,25 @@ public class shooting : MonoBehaviour
         firePoint.LookAt(lookDirection);
         //Debug.Log("lookAngle: " + lookAngle + ", lookDirection: " + lookDirection);
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && shootingCooldown <= 0f)
         {
+
             anim.SetTrigger(shoot_ANIMATION);
+
             //TODO: Separate shooting input from output
-            
+
+
             GameObject bulletClone = Instantiate(bullet);
             bulletClone.transform.position = firePoint.position;
             bulletClone.transform.rotation = Quaternion.Euler(0, 0, lookAngle);
 
             bulletClone.GetComponent<Rigidbody2D>().velocity = firePoint.forward * bulletSpeed;
-           
+            shootingCooldown = shootingCooldownMaximum;
+            
+
+
         }
+        shootingCooldown -= Time.deltaTime;
     }
 }
 
