@@ -14,8 +14,10 @@ public class Patrol : MonoBehaviour
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
 
-        RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, 2f);
-        if(groundInfo.collider == null)
+        RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, 2f,7);
+        Debug.DrawLine(groundDetection.position, groundDetection.position * Vector2.down * 2f);
+        
+        if (groundInfo.collider == null)
         {
             if(movingRight == true)
             {
