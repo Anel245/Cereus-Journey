@@ -29,7 +29,7 @@ public class Patrol_4 : MonoBehaviour
     {
         if (canStart)
         {
-            Debug.Log("Started");
+            
             canStart = false;
             StopAllCoroutines();
             StartCoroutine(MoveTo());

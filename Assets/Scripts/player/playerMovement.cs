@@ -41,9 +41,9 @@ public class playerMovement : MonoBehaviour
         AnimatePlayer();
         
         float speed = Mathf.Abs(movementX);
-        Debug.Log(speed);
+        
         anim.SetFloat("speed",speed);
-        Debug.Log(speed);
+        
 
     }
 

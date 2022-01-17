@@ -47,9 +47,10 @@ public class Jump : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        
-        if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
+
+            if (Input.GetKey(KeyCode.Space) && !isJumping)
         {
+            print("jump");
             anim.SetTrigger("takeOf");
             
             rigidbody2d.velocity = Vector2.up * jumpVelocity;
