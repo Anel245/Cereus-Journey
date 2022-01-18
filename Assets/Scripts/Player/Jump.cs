@@ -52,7 +52,8 @@ public class Jump : MonoBehaviour
         {
             print("jump");
             anim.SetTrigger("takeOf");
-            
+
+            //TODO place jump sound
             rigidbody2d.velocity = Vector2.up * jumpVelocity;
             isJumping = true;
         }

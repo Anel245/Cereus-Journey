@@ -8,7 +8,7 @@ public class shooting : MonoBehaviour
     public Transform firePoint;
     public float bulletSpeed = 50;
     private Animator anim;
-    private string shoot_ANIMATION = "Shoot";
+    private string shoot_ANIMATION = "Shoot"; 
     private float shootingCooldown = 0.25f;
     [SerializeField]
     private float shootingCooldownMaximum = 0.5f;
@@ -42,7 +42,7 @@ public class shooting : MonoBehaviour
 
             //TODO: Separate shooting input from output
 
-
+            //TODO place shooting sound
             GameObject bulletClone = Instantiate(bullet);
             bulletClone.transform.position = firePoint.position;
             bulletClone.transform.rotation = Quaternion.Euler(0, 0, lookAngle);
@@ -54,6 +54,24 @@ public class shooting : MonoBehaviour
 
         }
         shootingCooldown -= Time.deltaTime;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Enemy")
+        {
+            Debug.Log("collision");
+            collision.GetComponent<Damage_Death>().TakeDamage(25);
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+        else if (collision.tag == "Ground")
+        {
+            Debug.Log("Pain");
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+
+        }
     }
 }
 
