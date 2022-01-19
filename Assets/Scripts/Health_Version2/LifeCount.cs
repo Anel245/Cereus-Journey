@@ -18,6 +18,7 @@ public class LifeCount : MonoBehaviour
     public void LoseLife()
     {
         //Decrease the value of livesRemaining
+        SoundManager.PlaySound("LifeLoosing");
         livesRemaining--;
         print(livesRemaining);
         //Hide one of the life image

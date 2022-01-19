@@ -43,6 +43,7 @@ public class shooting : MonoBehaviour
             //TODO: Separate shooting input from output
 
             //TODO place shooting sound
+            SoundManager.PlaySound("crossbow");
             GameObject bulletClone = Instantiate(bullet);
             bulletClone.transform.position = firePoint.position;
             bulletClone.transform.rotation = Quaternion.Euler(0, 0, lookAngle);
