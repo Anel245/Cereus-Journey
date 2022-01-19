@@ -65,12 +65,14 @@ public class playerMovement : MonoBehaviour
         // we are going to the right side
         if (movementX > 0)
         {
+            //TODO place run sound
             anim.SetBool("run", true);
             sr.flipX = false;
         }
         else if (movementX < 0)
         {
-        // we are going to the left side
+            // we are going to the left side
+            //TODO place run sound
             anim.SetBool("run", true);
             sr.flipX = true;
         }     
