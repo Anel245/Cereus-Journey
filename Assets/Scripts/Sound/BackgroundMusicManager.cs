@@ -24,7 +24,7 @@ public class BackgroundMusicManager : MonoBehaviour
             case "B_Music_1":
                 audioSrc.PlayOneShot(B_Music_1Music);
                 break;
-               //SoundManager.PlaySound("B_Music_1");
+                //BackgroundMusicManager.PlaySound("B_Music_1");
 
         }
     }
