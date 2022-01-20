@@ -20,6 +20,8 @@ public class playerMovement : MonoBehaviour
 
     private bool isGrounded;
     private string GROUND_TAG = "Ground";
+
+    AudioSource audioSrc;
     private void Awake()
     {
         myBody = GetComponent<Rigidbody2D>();
@@ -28,13 +30,11 @@ public class playerMovement : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
     }
 
-    // Start is called before the first frame update
     void Start()
     {
-
+        audioSrc = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         PlayerMoveKeyboard();
@@ -45,11 +45,6 @@ public class playerMovement : MonoBehaviour
         anim.SetFloat("speed",speed);
         
 
-    }
-
-    private void FixedUpdate()
-    {
-        
     }
 
     void PlayerMoveKeyboard()
@@ -68,6 +63,8 @@ public class playerMovement : MonoBehaviour
             //TODO place run sound
             anim.SetBool("run", true);
             sr.flipX = false;
+            if (!audioSrc.isPlaying)
+                audioSrc.Play();
         }
         else if (movementX < 0)
         {
@@ -75,10 +72,13 @@ public class playerMovement : MonoBehaviour
             //TODO place run sound
             anim.SetBool("run", true);
             sr.flipX = true;
+            if (!audioSrc.isPlaying)
+                audioSrc.Play();
         }     
         else
         {
             anim.SetBool("run", false);
+            audioSrc.Stop();
         }   
 
     }
