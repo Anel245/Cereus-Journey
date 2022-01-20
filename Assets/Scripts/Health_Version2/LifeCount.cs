@@ -28,8 +28,20 @@ public class LifeCount : MonoBehaviour
         // If we run out lives we lose the game
         if(livesRemaining==0)
         {
-            PlayerManager.isGameOver = true;
-            gameObject.SetActive(false);
+            KillPlayer();
+        }
+
+    }
+
+    public void KillPlayer()
+    {
+        livesRemaining = 0;
+        PlayerManager.isGameOver = true;
+        gameObject.SetActive(false);
+        for(int i = 0; i < lives.Length; i++)
+        {
+        lives[i].enabled = false;
+
         }
 
     }

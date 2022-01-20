@@ -4,22 +4,20 @@ using UnityEngine;
 
 public class Death_Platforms : MonoBehaviour
 {
-    public int livesRemaining;
-    [SerializeField] LifeCount lifeCounter;
 
     private void Start()
     {
-        lifeCounter = transform.GetComponent<LifeCount>();
-        livesRemaining = transform.GetComponent<LifeCount>().livesRemaining;
+
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-
-        if (collision.tag == "Player")
+        print("deathCollision");
+        if (collision.gameObject.tag == "Player")
         {
-            livesRemaining = 0;
-           
+            collision.gameObject.GetComponent<LifeCount>().KillPlayer();
+
+
 
 
         }
