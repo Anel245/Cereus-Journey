@@ -5,10 +5,15 @@ using UnityEngine;
 public class GameOver : MonoBehaviour
 {
     AudioSource audioSrc;
+    BackgroundMusicManager Music;
     void Start()
     {
         audioSrc = GetComponent<AudioSource>();
-        BackgroundMusicManager.PlaySound("GameOver");
+        Music = GameObject.Find("BackgroundMusicManager").GetComponent<BackgroundMusicManager>();
+        Music.StopMusic();
+        audioSrc.Play();
+        //BackgroundMusicManager.StopMusic();
+        //BackgroundMusicManager.PlaySound("GameOver");
     }
 
     

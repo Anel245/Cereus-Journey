@@ -50,10 +50,12 @@ public class Jump : MonoBehaviour
 
             if (Input.GetKey(KeyCode.Space) && !isJumping)
         {
+            SoundManager.PlaySound("Jump");
             print("jump");
             anim.SetTrigger("takeOf");
 
             //TODO place jump sound
+           
             rigidbody2d.velocity = Vector2.up * jumpVelocity;
             isJumping = true;
         }
@@ -61,6 +63,7 @@ public class Jump : MonoBehaviour
         else if (isJumping) 
         {
             anim.SetBool("isJumping", true);
+            
         }
 
 
@@ -72,9 +75,13 @@ public class Jump : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ground"))
         {
+            //Place landing sound
+            
             print("landing");
+            
             isJumping = false;
             anim.SetBool("isJumping", false);
+           
         }
 
     }

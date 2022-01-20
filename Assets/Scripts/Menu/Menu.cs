@@ -10,7 +10,7 @@ public class Menu : MonoBehaviour
     void Start()
     {
         audioSrc = GetComponent<AudioSource>();
-        BackgroundMusicManager.PlaySound("MainMenu");
+        //BackgroundMusicManager.PlaySound("MainMenu");
     }
 
     public void PlayGame(){
