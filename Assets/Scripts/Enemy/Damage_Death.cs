@@ -21,7 +21,7 @@ public class Damage_Death : MonoBehaviour
         {
             //Maybe if there is a Death animation, play it here
             print("I died lol");
-            
+            SoundManager.PlaySound("EnemyDeath");
             GetComponent<CapsuleCollider2D>().enabled = false;
             this.enabled = false;
             Destroy(gameObject);

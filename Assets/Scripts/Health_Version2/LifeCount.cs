@@ -36,6 +36,8 @@ public class LifeCount : MonoBehaviour
     public void KillPlayer()
     {
         livesRemaining = 0;
+        //Place death sound here
+        SoundManager.PlaySound("PlayerDeath");
         PlayerManager.isGameOver = true;
         gameObject.SetActive(false);
         for(int i = 0; i < lives.Length; i++)
