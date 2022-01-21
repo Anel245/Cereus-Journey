@@ -65,6 +65,15 @@ public class Platform_Patroling : MonoBehaviour
         return transform.localScale.x > Mathf.Epsilon;
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        collision.transform.SetParent(transform);
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        collision.transform.SetParent(null); 
+    }
+
 
 
 
