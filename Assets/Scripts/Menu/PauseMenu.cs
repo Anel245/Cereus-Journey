@@ -27,9 +27,12 @@ public class PauseMenu : MonoBehaviour
         {
             if (GameIsPaused)
             {
+                BackgroundMusicManager.Instance.PlaySound("B_Music_1");
                 Resume();
                 //audioSrc.Play();
-                BackgroundMusicManager.Instance.PlaySound("B_Music_1");
+                //Debug.Log("playsound");
+                //BackgroundMusicManager.Instance.PlaySound("B_Music_1");
+
             }
             else
             {
@@ -42,6 +45,7 @@ public class PauseMenu : MonoBehaviour
     }
      public void Resume ()
     {
+        BackgroundMusicManager.Instance.PlaySound("B_Music_1");
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;

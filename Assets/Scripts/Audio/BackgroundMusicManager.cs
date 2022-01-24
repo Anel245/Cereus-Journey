@@ -47,7 +47,7 @@ public class BackgroundMusicManager : MonoBehaviour
         audioSrc = GetComponent<AudioSource>();
     }
 
-    public  void StopMusic()
+    public void StopMusic()
     {
         audioSrc.Stop();
     }
