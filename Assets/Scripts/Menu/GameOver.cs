@@ -8,10 +8,11 @@ public class GameOver : MonoBehaviour
     BackgroundMusicManager Music;
     void Start()
     {
-        audioSrc = GetComponent<AudioSource>();
-        Music = GameObject.Find("BackgroundMusicManager").GetComponent<BackgroundMusicManager>();
-        Music.StopMusic();
-        audioSrc.Play();
+        //audioSrc = GetComponent<AudioSource>();
+        //Music = GameObject.Find("BackgroundMusicManager").GetComponent<BackgroundMusicManager>();
+       // Music.StopMusic();
+       // audioSrc.Play();
+        BackgroundMusicManager.Instance.PlaySound("GameOver");
         //BackgroundMusicManager.StopMusic();
         //BackgroundMusicManager.PlaySound("GameOver");
     }

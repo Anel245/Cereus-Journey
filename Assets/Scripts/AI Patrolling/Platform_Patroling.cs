@@ -16,12 +16,14 @@ public class Platform_Patroling : MonoBehaviour
     Vector3 start, des;
     void Start()
     {
-        LeftPos = transform.GetChild(0);
-        RightPos = transform.GetChild(1);
-        start = transform.position;
-        des = IsMovingRight ? RightPos.position : LeftPos.position;
+        LeftPos = transform.parent.GetChild(0);
+        RightPos = transform.parent.GetChild(1);
+        start = LeftPos.position;
+        des = RightPos.position;
         canStart = true;
         
+        
+
     }
 
 
@@ -33,6 +35,7 @@ public class Platform_Patroling : MonoBehaviour
             canStart = false;
             StopAllCoroutines();
             StartCoroutine(MoveTo());
+            
         }
     }
     IEnumerator MoveTo()
@@ -61,6 +64,17 @@ public class Platform_Patroling : MonoBehaviour
     {
         return transform.localScale.x > Mathf.Epsilon;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        collision.transform.SetParent(transform);
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        collision.transform.SetParent(null); 
+    }
+
+
 
 
 

@@ -29,6 +29,7 @@ public class PlayerManager : MonoBehaviour
 
     public void ReplayLevel() 
     {
+        BackgroundMusicManager.Instance.PlaySound("B_Music_1");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
