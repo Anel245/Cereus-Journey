@@ -7,6 +7,8 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
+        BackgroundMusicManager.Instance.PlaySound("B_Music_1");
+        Debug.Log("Play");
         SceneManager.LoadScene("Level01");
     }
     public void GoToSettingsMenu()

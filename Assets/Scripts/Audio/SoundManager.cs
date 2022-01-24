@@ -20,8 +20,12 @@ public class SoundManager : MonoBehaviour
 
         audioSrc = GetComponent<AudioSource>();
     }
+    public void StopMusic()
+    {
+        audioSrc.Stop();
+    }
 
-    
+
 
     public static void PlaySound (string clip)
     {

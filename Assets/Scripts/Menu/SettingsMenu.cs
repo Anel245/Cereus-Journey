@@ -14,6 +14,7 @@ public class SettingsMenu : MonoBehaviour
     }
     public void SetQuality (int qualityIndex)
     {
+        Debug.Log("QualityLevel " + qualityIndex);
         QualitySettings.SetQualityLevel(qualityIndex);
     }
 }
