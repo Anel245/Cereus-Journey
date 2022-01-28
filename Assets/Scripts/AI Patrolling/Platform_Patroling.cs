@@ -16,8 +16,8 @@ public class Platform_Patroling : MonoBehaviour
     Vector3 start, des;
     void Start()
     {
-        LeftPos = transform.parent.GetChild(0);
-        RightPos = transform.parent.GetChild(1);
+        LeftPos = transform.GetChild(0);
+        RightPos = transform.GetChild(1);
         start = LeftPos.position;
         des = RightPos.position;
         canStart = true;
