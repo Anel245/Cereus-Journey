@@ -2101,7 +2101,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3794ef6100020dd47ba2b4d8fb34b5dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1c423b5355e8dc141b1ae5d916e0fdcb, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.232
   m_Pitch: 1
@@ -2213,9 +2213,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddacc65265edac94fa337d1768f5eb8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  B_Music_1Music: {fileID: 0}
-  MainMenuMusic: {fileID: 0}
-  GameOverMusic: {fileID: 0}
+  B_Music_1Music: {fileID: 8300000, guid: 1c423b5355e8dc141b1ae5d916e0fdcb, type: 3}
+  MainMenuMusic: {fileID: 8300000, guid: 02afb3342332f7e4e9ea71315b5b6ec7, type: 3}
+  GameOverMusic: {fileID: 8300000, guid: 358a0a5be7c7b42478541fe72d361d31, type: 3}
 --- !u!1 &165107059
 GameObject:
   m_ObjectHideFlags: 0
@@ -21722,11 +21722,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2952472723604003028, guid: f396fbfe1ee94564a8285727a84b20f7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.253
+      value: -9.19
       objectReference: {fileID: 0}
     - target: {fileID: 2952472723604003028, guid: f396fbfe1ee94564a8285727a84b20f7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.6556
+      value: -1.61
       objectReference: {fileID: 0}
     - target: {fileID: 2956019977548102220, guid: f396fbfe1ee94564a8285727a84b20f7, type: 3}
       propertyPath: m_RootOrder
