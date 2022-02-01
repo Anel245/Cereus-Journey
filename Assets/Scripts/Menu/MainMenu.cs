@@ -17,11 +17,16 @@ public class MainMenu : MonoBehaviour
     }
     public void GoToMainMenu()
     {
+        BackgroundMusicManager.Instance.PlaySound("MainMenu");
         SceneManager.LoadScene("MainMenu");
     }
     public void GoToControlsMenu()
     {
         SceneManager.LoadScene("ControlsMenu");
+    }
+    public void GoToWin()
+    {
+        SceneManager.LoadScene("Win");
     }
 
     public void QuitGame()
