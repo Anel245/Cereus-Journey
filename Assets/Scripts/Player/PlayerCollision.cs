@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCollision : MonoBehaviour
 
@@ -12,6 +13,10 @@ public class PlayerCollision : MonoBehaviour
     {
         anim = GetComponent<Animator>();
     }
+    public void GoToWin()
+    {
+        SceneManager.LoadScene("Win");
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -22,8 +27,16 @@ public class PlayerCollision : MonoBehaviour
 
 
         }
+        if (collision.transform.tag == "Win")
+        {
+            Debug.Log("THIS SHIT SHOULD WORK!");
+            //GetComponent<MainMenu>().GoToWin();
+            GoToWin();
 
-        
+
+        }
+
+
     }
 
 
