@@ -7,7 +7,8 @@ public class playerMovement : MonoBehaviour
     [SerializeField]
     private float moveForce = 10f;
     [SerializeField]
-    
+
+
 
     private float movementX;
 
@@ -20,6 +21,8 @@ public class playerMovement : MonoBehaviour
 
     private bool isGrounded;
     private string GROUND_TAG = "Ground";
+
+
 
     AudioSource audioSrc;
     private void Awake()

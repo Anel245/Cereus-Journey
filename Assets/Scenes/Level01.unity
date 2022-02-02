@@ -1758,11 +1758,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1204732122072764748, guid: 0557beaacb0865341a4b4727e9dc2cfe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.04
+      value: 26.86
       objectReference: {fileID: 0}
     - target: {fileID: 1204732122072764748, guid: 0557beaacb0865341a4b4727e9dc2cfe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -22.35
+      value: -15.13
       objectReference: {fileID: 0}
     - target: {fileID: 1204732122072764748, guid: 0557beaacb0865341a4b4727e9dc2cfe, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3157,7 +3157,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 259989272}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.841969, y: 17.21, z: 34.46927}
+  m_LocalPosition: {x: -21.603971, y: 17.21, z: 34.46927}
   m_LocalScale: {x: 0.42639, y: 0.38643, z: 1.01613}
   m_Children: []
   m_Father: {fileID: 445142783}
@@ -3461,6 +3461,7 @@ GameObject:
   - component: {fileID: 271717970}
   - component: {fileID: 271717969}
   - component: {fileID: 271717968}
+  - component: {fileID: 271717972}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -3553,6 +3554,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &271717972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271717967}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4b0f50e39fe0914581409f9f4b12440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heart1: {fileID: 292402272}
+  heart2: {fileID: 279608222}
+  heart3: {fileID: 33243060}
 --- !u!1 &275977745
 GameObject:
   m_ObjectHideFlags: 0
@@ -3770,7 +3786,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283912792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.04, y: -21.050001, z: -47.7983}
+  m_LocalPosition: {x: 26.86, y: -13.83, z: -47.7983}
   m_LocalScale: {x: 1.1241, y: 1.1241, z: 1.1241}
   m_Children:
   - {fileID: 640181620}
@@ -10475,7 +10491,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.04, y: -21.050001, z: -47.7983}
+  m_LocalPosition: {x: 26.86, y: -13.83, z: -47.7983}
   m_LocalScale: {x: 5.8833203, y: 12.291639, z: 1.2661862}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12092,7 +12108,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1132422000}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.593925, y: 17.34, z: 34.46927}
+  m_LocalPosition: {x: -13.937924, y: 17.34, z: 34.46927}
   m_LocalScale: {x: 0.39192998, y: 0.38981998, z: 1.1264}
   m_Children: []
   m_Father: {fileID: 445142783}
@@ -14912,7 +14928,7 @@ MonoBehaviour:
   - {fileID: 279608224}
   - {fileID: 33243062}
   - {fileID: 891190639}
-  livesRemaining: 0
+  livesRemaining: 4
 --- !u!82 &1309858213
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15016,7 +15032,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309858211}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90b814e14a2491946bfddbad3ef732e2, type: 3}
   m_Name: 
@@ -15082,6 +15098,29 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   jumpVelocity: 12.3
+--- !u!212 &1309858224 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1204732122072764751, guid: 0557beaacb0865341a4b4727e9dc2cfe, type: 3}
+  m_PrefabInstance: {fileID: 130904714}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1309858225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309858211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e17234c89276253438d2ff6bb585aafd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashColor: {r: 0.25943398, g: 1, b: 0.4068611, a: 0.6156863}
+  regularColor: {r: 1, g: 0.8915094, b: 0.8915094, a: 0.49411765}
+  flashDuration: 0.5
+  numberOfFlashes: 4
+  triggerCollider: {fileID: 1309858215}
+  mySprite: {fileID: 1309858224}
 --- !u!1001 &1313607345
 PrefabInstance:
   m_ObjectHideFlags: 0
