@@ -7,7 +7,7 @@ public class LifeCount : MonoBehaviour
 {
     public Image[] lives;
     public int livesRemaining;
-   
+
 
     //4 lives - 4 images (0,1,2,3)
     //3 lives - 3 images (0,1,2,[3])
@@ -24,9 +24,9 @@ public class LifeCount : MonoBehaviour
         //Hide one of the life image
         lives[livesRemaining].enabled = false;
 
-     
+
         // If we run out lives we lose the game
-        if(livesRemaining==0)
+        if (livesRemaining == 0)
         {
             KillPlayer();
         }
@@ -40,20 +40,17 @@ public class LifeCount : MonoBehaviour
         SoundManager.PlaySound("PlayerDeath");
         PlayerManager.isGameOver = true;
         gameObject.SetActive(false);
-        for(int i = 0; i < lives.Length; i++)
+        for (int i = 0; i < lives.Length; i++)
         {
-        lives[i].enabled = false;
+            lives[i].enabled = false;
 
         }
 
     }
 
-    private void Update()
-    {
 
-
-    }
+}
 
   
-    }
+    
 
