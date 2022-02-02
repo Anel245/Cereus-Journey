@@ -8,10 +8,12 @@ public class PlayerCollision : MonoBehaviour
 {
     private Animator anim;
     private string hit_ANIMATION = "Hit";
+    private IFrames I;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        I = GetComponent<IFrames>();
     }
     public void GoToWin()
     {
@@ -22,8 +24,12 @@ public class PlayerCollision : MonoBehaviour
     {
         if(collision.transform.tag == "Enemy")
         {
-            anim.SetTrigger(hit_ANIMATION);
-            GetComponent<LifeCount>().LoseLife();
+
+            if (I.CanTakeDamage)
+            {
+                anim.SetTrigger(hit_ANIMATION);
+                GetComponent<LifeCount>().LoseLife();
+            }
 
 
         }

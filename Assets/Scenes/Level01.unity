@@ -1804,11 +1804,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1204732122072764748, guid: 0557beaacb0865341a4b4727e9dc2cfe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.16
+      value: -23.8
       objectReference: {fileID: 0}
     - target: {fileID: 1204732122072764748, guid: 0557beaacb0865341a4b4727e9dc2cfe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.74
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1204732122072764748, guid: 0557beaacb0865341a4b4727e9dc2cfe, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2931,7 +2931,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 259989272}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -36.255955, y: 17.21, z: 34.46927}
+  m_LocalPosition: {x: -32.33195, y: 17.21, z: 34.46927}
   m_LocalScale: {x: 0.42639, y: 0.38643, z: 1.01613}
   m_Children: []
   m_Father: {fileID: 445142783}
@@ -3536,7 +3536,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283912792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.16, y: 15.04, z: -47.7983}
+  m_LocalPosition: {x: -23.8, y: 15.3, z: -47.7983}
   m_LocalScale: {x: 1.1241, y: 1.1241, z: 1.1241}
   m_Children:
   - {fileID: 640181620}
@@ -10434,7 +10434,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.16, y: 15.04, z: -47.7983}
+  m_LocalPosition: {x: -23.8, y: 15.3, z: -47.7983}
   m_LocalScale: {x: 5.8833203, y: 12.291639, z: 1.2661862}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12477,7 +12477,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1132422000}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.961927, y: 17.34, z: 34.46927}
+  m_LocalPosition: {x: -23.47392, y: 17.34, z: 34.46927}
   m_LocalScale: {x: 0.39192998, y: 0.38981998, z: 1.1264}
   m_Children: []
   m_Father: {fileID: 445142783}
@@ -14845,6 +14845,11 @@ MonoBehaviour:
   firePoint: {fileID: 1299775704}
   bulletSpeed: 100
   shootingCooldownMaximum: 0.5
+--- !u!212 &1309858221 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1204732122072764751, guid: 0557beaacb0865341a4b4727e9dc2cfe, type: 3}
+  m_PrefabInstance: {fileID: 130904714}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1309858222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14873,6 +14878,26 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   jumpVelocity: 12.3
+--- !u!114 &1309858224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309858211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e17234c89276253438d2ff6bb585aafd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashColor: {r: 0.4481132, g: 1, b: 0.4671581, a: 0.6392157}
+  regularColor: {r: 1, g: 1, b: 1, a: 1}
+  flashDuration: 0.07
+  numberOfFlashes: 4
+  triggerCollider: {fileID: 1309858215}
+  mySprite: {fileID: 1309858221}
+  Time: 5
+  CanTakeDamage: 1
 --- !u!1001 &1313607345
 PrefabInstance:
   m_ObjectHideFlags: 0
