@@ -6,7 +6,10 @@ public class Damage_Death : MonoBehaviour
 {
 
     public int enemyHP = 100;
-    
+
+
+
+
 
     public void TakeDamage(int damageAmount)
     {
@@ -14,7 +17,9 @@ public class Damage_Death : MonoBehaviour
         if (enemyHP > 0)
         {
             //Maybe if there is a Hit animation, play it here
+            
             print("I'm in pain");
+
 
         }
         else
