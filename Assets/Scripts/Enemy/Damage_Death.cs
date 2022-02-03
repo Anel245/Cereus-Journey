@@ -7,24 +7,24 @@ public class Damage_Death : MonoBehaviour
 
     public int enemyHP = 100;
 
-
-
-
+    public Color flashColor;
+    public Color regularColor;
+    public float flashDuration;
+    public int numberOfFlashes;
+    public SpriteRenderer mySprite;
+    public float Time = 3f;
+    [HideInInspector]
+    public bool CanTakeDamage = true;
 
     public void TakeDamage(int damageAmount)
     {
         enemyHP -= damageAmount;
         if (enemyHP > 0)
-        {
-            //Maybe if there is a Hit animation, play it here
-            
+        {            
             print("I'm in pain");
-
-
         }
         else
-        {
-            //Maybe if there is a Death animation, play it here
+        {          
             print("I died lol");
             SoundManager.PlaySound("EnemyDeath");
             GetComponent<CapsuleCollider2D>().enabled = false;
@@ -41,10 +41,28 @@ public class Damage_Death : MonoBehaviour
             TakeDamage(25);
             //TODO place sound here !
             SoundManager.PlaySound("enemyDies");
-            Destroy(collision.gameObject);
-            
+            Destroy(collision.gameObject);          
         }
         
+    }
+
+    private IEnumerator Flash()
+    {
+        float timer = 0f;
+        Debug.Log("UGHHHHHH");
+        int temp = 0;       
+        CanTakeDamage = false;       
+        while (timer < Time)
+        {
+            mySprite.color = flashColor;
+            yield return new WaitForSeconds(flashDuration);
+            timer = timer + flashDuration;
+            mySprite.color = regularColor;
+            yield return new WaitForSeconds(flashDuration);
+            timer = timer + flashDuration;
+
+        }
+        CanTakeDamage = true;             
     }
 
 }
