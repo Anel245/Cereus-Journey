@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public static AudioClip crossbowSound, enemyDiesSound, LifeLoosingSound, JumpSound, EnemyDeathSound, PlayerDeathSound, LandingSound;
+    public static AudioClip crossbowSound, enemyDiesSound, LifeLoosingSound, JumpSound, EnemyDeathSound, PlayerDeathSound, LandingSound, Triggerbox1Sound, Triggerbox2Sound, Triggerbox3Sound, Triggerbox4Sound;
     static AudioSource audioSrc;
 
     void Start()
@@ -16,6 +16,10 @@ public class SoundManager : MonoBehaviour
         EnemyDeathSound = Resources.Load<AudioClip>("EnemyDeath");
         PlayerDeathSound = Resources.Load<AudioClip>("PlayerDeath");
         LandingSound= Resources.Load<AudioClip>("Landing");
+        Triggerbox1Sound = Resources.Load<AudioClip>("Triggerbox1");
+        Triggerbox2Sound = Resources.Load<AudioClip>("Triggerbox2");
+        Triggerbox3Sound = Resources.Load<AudioClip>("Triggerbox3");
+        Triggerbox4Sound = Resources.Load<AudioClip>("Triggerbox4");
         //  = Resources.Load<AudioClip>("");
 
         audioSrc = GetComponent<AudioSource>();
@@ -52,8 +56,23 @@ public class SoundManager : MonoBehaviour
         case "Landing":
                 audioSrc.PlayOneShot(LandingSound);
                 break;
+        case "Triggerbox1":
+                audioSrc.PlayOneShot(Triggerbox1Sound);
+                break;
+        case "Triggerbox2":
+                audioSrc.PlayOneShot(Triggerbox2Sound);
+                break;
+        case "Triggerbox3":
+                audioSrc.PlayOneShot(Triggerbox3Sound);
+                break;
+        case "Triggerbox4":
+                audioSrc.PlayOneShot(Triggerbox4Sound);
+                break;
 
-                //SoundManager.PlaySound("Landing");
+
+
+
+                //SoundManager.PlaySound("Triggerbox1");
 
         }
     }
