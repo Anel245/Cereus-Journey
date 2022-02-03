@@ -21,7 +21,7 @@ TagManager:
   - Player
   - 
   - Platforms
-  - 
+  - GIF
   - 
   - 
   - 
@@ -47,6 +47,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
+  - name: GIF
     uniqueID: 3369789423
     locked: 0
