@@ -27,7 +27,7 @@ public class Story : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("StoryDetection");
-        if (collision.gameObject.layer == 10)       
+        if (collision.gameObject.layer == 10)
         {
             Debug.Log("Story_1");
             ChangeClip(Triggerbox1Sound);
@@ -36,19 +36,19 @@ public class Story : MonoBehaviour
         if (collision.gameObject.layer == 11)
         {
             Debug.Log("Story_2");
-            SoundManager.PlaySound("Triggerbox2");
+            ChangeClip(Triggerbox2Sound);
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.layer == 12)
         {
             Debug.Log("Story_3");
-            SoundManager.PlaySound("Triggerbox3");
+            ChangeClip(Triggerbox3Sound);
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.layer == 13)
         {
             Debug.Log("Story_4");
-            SoundManager.PlaySound("Triggerbox4");
+            ChangeClip(Triggerbox4Sound);
             Destroy(collision.gameObject);
         }
 
