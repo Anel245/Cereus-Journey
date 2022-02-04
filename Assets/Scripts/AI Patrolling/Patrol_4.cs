@@ -14,12 +14,14 @@ public class Patrol_4 : MonoBehaviour
     public bool canStart;
     public float fraction;
     Vector3 start, des;
+    private float scale;
     void Start()
     {
         LeftPos = transform.GetChild(0);
         RightPos = transform.GetChild(1);
         start = transform.position;
         des = IsMovingRight ? RightPos.position : LeftPos.position;
+        scale = transform.localScale.x;
         canStart = true;
         Turn();
     }
@@ -67,7 +69,7 @@ public class Patrol_4 : MonoBehaviour
         //Transform target = IsMovingRight ? RightPos : LeftPos;
         //CurrentTarget = target;
         //transform.LookAt (CurrentTarget);
-        float direction = IsMovingRight ? -0.14f : 0.14f;
+        float direction = IsMovingRight ? -scale: scale;
         transform.localScale = new Vector2(direction, transform.localScale.y);
 
     }

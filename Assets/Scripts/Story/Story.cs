@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Story : MonoBehaviour
 {
+    static AudioSource audioSrc;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,4 +48,5 @@ public class Story : MonoBehaviour
 
 
     }
+
 }
