@@ -25,6 +25,24 @@ public class Story : MonoBehaviour
             SoundManager.PlaySound("Triggerbox1");
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.layer == 11)
+        {
+            Debug.Log("Story_2");
+            SoundManager.PlaySound("Triggerbox2");
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.layer == 12)
+        {
+            Debug.Log("Story_3");
+            SoundManager.PlaySound("Triggerbox3");
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.layer == 13)
+        {
+            Debug.Log("Story_4");
+            SoundManager.PlaySound("Triggerbox4");
+            Destroy(collision.gameObject);
+        }
 
 
     }
