@@ -28286,7 +28286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5858132124128768216, guid: d21e17f69272d5d43993e4f4d79f93f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.3
+      value: 16.11
       objectReference: {fileID: 0}
     - target: {fileID: 5858132124128768216, guid: d21e17f69272d5d43993e4f4d79f93f9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -29686,14 +29686,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5858132123945266894, guid: d21e17f69272d5d43993e4f4d79f93f9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 29.934399
-      objectReference: {fileID: 0}
-    - target: {fileID: 5858132124100872138, guid: d21e17f69272d5d43993e4f4d79f93f9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 31.70482
-      objectReference: {fileID: 0}
     - target: {fileID: 5858132124128768216, guid: d21e17f69272d5d43993e4f4d79f93f9, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -29746,30 +29738,6 @@ PrefabInstance:
       propertyPath: parallaxCamera
       value: 
       objectReference: {fileID: 963194231}
-    - target: {fileID: 5858132125632660652, guid: d21e17f69272d5d43993e4f4d79f93f9, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5858132125632660653, guid: d21e17f69272d5d43993e4f4d79f93f9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 36.41105
-      objectReference: {fileID: 0}
-    - target: {fileID: 5858132125638668326, guid: d21e17f69272d5d43993e4f4d79f93f9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 31.675858
-      objectReference: {fileID: 0}
-    - target: {fileID: 5858132125666701756, guid: d21e17f69272d5d43993e4f4d79f93f9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 31.713264
-      objectReference: {fileID: 0}
-    - target: {fileID: 5858132125669567213, guid: d21e17f69272d5d43993e4f4d79f93f9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 31.145142
-      objectReference: {fileID: 0}
-    - target: {fileID: 5858132125871642512, guid: d21e17f69272d5d43993e4f4d79f93f9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 31.665958
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d21e17f69272d5d43993e4f4d79f93f9, type: 3}
 --- !u!1001 &6152114406111155882
